@@ -12,8 +12,8 @@ import numpy as np
 import torch
 import typing as tp
 
-from torchcodec import AudioDecoder, AudioEncoder
-
+from torchcodec.decoders import AudioDecoder
+from torchcodec.encoders import AudioEncoder
 
 def _read_info(path):
     stdout_data = sp.check_output([

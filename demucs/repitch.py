@@ -10,8 +10,7 @@ import subprocess as sp
 import tempfile
 
 import torch
-from torchcodec import AudioDecoder
-
+from torchcodec.decoders import AudioDecoder
 from .audio import save_audio
 
 

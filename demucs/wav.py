@@ -20,8 +20,8 @@ import torch as th
 from torch import distributed
 from torch.nn import functional as F
 
-from torchcodec import AudioDecoder, AudioEncoder
-
+from torchcodec.decoders import AudioDecoder
+from torchcodec.encoders import AudioEncoder
 from .audio import convert_audio_channels
 from . import distrib
 

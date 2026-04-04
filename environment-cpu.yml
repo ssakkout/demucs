@@ -1,4 +1,4 @@
-name: demucs
+name: demucs-torchcodec
 
 channels:
   - pytorch

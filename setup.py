@@ -7,22 +7,38 @@
 # Inspired from https://github.com/kennethreitz/setup.py
 
 from pathlib import Path
-
 from setuptools import setup
 
+NAME = 'demucs-torchcodec'
+DESCRIPTION = 'An updated continuation of Demucs for source separation using torchcodec instead of torchaudio.'
+AUTHOR = 'Alexandre Défossez'
+MAINTAINER = 'Soheir Elsakkout' 
+MAINTAINER_EMAIL = 'ssakkout.dev@gmail.com' 
+URL = 'https://github.com/ssakkout/demucs-torchcodec'
+
+
+'''
+Original project
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+# author: adefossez
+# Inspired from https://github.com/kennethreitz/setup.py
 
 NAME = 'demucs'
+version = "4.1.0a2"
 DESCRIPTION = 'Music source separation in the waveform domain.'
-
 URL = 'https://github.com/facebookresearch/demucs'
 EMAIL = 'defossez@fb.com'
 AUTHOR = 'Alexandre Défossez'
-REQUIRES_PYTHON = '>=3.8.0'
+'''
+REQUIRES_PYTHON = '>=3.8.0, <=3.13.0'
 
 HERE = Path(__file__).parent
 
-# Get version without explicitely loading the module.
-for line in open('demucs/__init__.py'):
+for line in open('demucs/__init__.py', encoding='utf-8'): 
     line = line.strip()
     if '__version__' in line:
         context = {}
@@ -31,7 +47,7 @@ for line in open('demucs/__init__.py'):
 
 
 def load_requirements(name):
-    required = [i.strip() for i in open(HERE / name)]
+    required = [i.strip() for i in open(HERE / name, encoding='utf-8')]
     required = [i for i in required if not i.startswith('#')]
     return required
 
@@ -52,7 +68,8 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     author=AUTHOR,
-    author_email=EMAIL,
+    maintainer=MAINTAINER,
+    maintainer_email=MAINTAINER_EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=['demucs'],
@@ -62,7 +79,7 @@ setup(
     install_requires=REQUIRED,
     include_package_data=True,
     entry_points={
-        'console_scripts': ['demucs=demucs.separate:main'],
+        'console_scripts': ['demucs-torchcodec=demucs.separate:main'],
     },
     license='MIT License',
     classifiers=[

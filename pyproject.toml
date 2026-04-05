@@ -8,10 +8,10 @@ description = "An updated continuation of Demucs for source separation using tor
 readme = "README.md"
 requires-python = ">=3.8, <=3.13.0"
 license = { text = "MIT License" }
-author = [
+authors = [
     { name = "Alexandre Défossez" }
 ]
-maintainer = [
+maintainers = [
     { name = "Soheir Elsakkout", email = "ssakkout.dev@gmail.com" }
 ]
 keywords = ["source separation", "music", "torchcodec", "demucs"]

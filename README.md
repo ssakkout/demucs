@@ -2,11 +2,18 @@ A fork from the archived repo of [demucs](https://github.com/facebookresearch/de
 
 This version replaces torchaudio with torchcodec.
 
-**Usage:**
+**Installation:**
 
 ```
-pip install -U git+https://github.com/ssakkout/demucs-torchcodec.git
+pip install -U demucs-torchcodec
 ```
+
+**Usage**
+
+```
+demucs-torchcodec test.mp3
+```
+
 
 **Credit: Alexandre Défossez**
 
